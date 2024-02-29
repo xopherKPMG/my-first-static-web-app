@@ -13,6 +13,7 @@
     Open the console in the browser developer tools to see the API responses.
 </blockquote>
 <div>
+    <button id="function" onclick="functionApp()">Function App </button>
     <button id="list" onclick="list()">List</button>
     <button id="get" onclick="get()">Get</button>
     <button id="update" onclick="update()">Update</button>
@@ -20,6 +21,12 @@
     <button id="delete" onclick="del()">Delete</button>
 </div>
 <script>
+async function functionApp(){
+const endpoint= 'https://testworkingfunctionapp.azurewebsites.net/api/http_trigger?code=LBBEGsTjqUsl1bQCD_vesd7lWtrgNEvPRffv7G680Y9vAzFuoS1Wsw=='
+const response = await fetch(endpoint);
+console.table(response)
+}
+  
     async function list() {
   const endpoint = '/data-api/rest/Person';
   const response = await fetch(endpoint);
