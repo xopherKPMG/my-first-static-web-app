@@ -22,7 +22,7 @@
 </div>
 <script>
 async function functionApp(){
-const endpoint= 'https://testworkingfunctionapp.azurewebsites.net/api/http_trigger?code=LBBEGsTjqUsl1bQCD_vesd7lWtrgNEvPRffv7G680Y9vAzFuoS1Wsw=='
+const endpoint= 'https://privatemooselogicapp.azurewebsites.net:443/api/TestConnect/triggers/When_a_HTTP_request_is_received/invoke?api-version=2022-05-01&sp=%2Ftriggers%2FWhen_a_HTTP_request_is_received%2Frun&sv=1.0&sig=0TJPAt8NmRLDsMN1PvqBeSvqwbm-NznvnzoKZUVBBoU'
 const response = await fetch(endpoint);
 console.table(response)
 }
